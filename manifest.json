@@ -10,7 +10,7 @@
       "content.js"
     ]
   }],
-  "permissions": ["activeTab","declarativeContent", "storage", "bookmarks", "chrome://favicon/", "contextMenus", "tabs"],
+  "permissions": ["activeTab","declarativeContent", "storage", "bookmarks", "chrome://favicon/", "contextMenus", "tabs", "history"],
   "background": {
     "scripts": ["background.js"]
   },
