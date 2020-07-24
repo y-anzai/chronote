@@ -2,7 +2,8 @@
     window.options = {
       defaults: {
         count: '15',
-        manager: 'true'
+        manager: 'true',
+        testarray: [],
       },
       save: function(options) {
         var key, _results;
