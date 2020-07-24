@@ -83,6 +83,11 @@
           if (result.title.length > 0) {
             $title.text(result.title);
           }
+          $desc = $('<span class="description">&nbsp;</span>');
+          $link.append($desc);
+          //if (result.desc.length > 0) {
+            $desc.text("更新日:");
+          //}
           $close = $('<a class="delete icon-remove-sign">x</a>');
           $link.append($close);
           return $close.on('click', function(e) {

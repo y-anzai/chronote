@@ -4,19 +4,52 @@
     <head>
         <title>ActiveBookmarks</title>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="js/options.js"></script>
-        <script src="js/popup.js"></script>
 
+        
+        <link href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/popup.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
-      <a href="#">履歴</a>
-      <a href="options.html">オプション</a>
-        <ul id="groups"></ul>
-        <footer>
-            <a href="chrome://bookmarks/" id="manager"><i class="icon-star"></i> Bookmarks Manager</a>
-        </footer>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#tabp1" data-toggle="tab">直前のお気に入り</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tabp2" data-toggle="tab">履歴</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="options.html">オプション</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tabp4" data-toggle="tab">タブ4</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="tabp1" class="tab-pane active">
+          <ul id="groups"></ul>
+        </div>
+        <div id="tabp2" class="tab-pane">
+          <img src="images/tabp2.jpg" class="img-fluid" alt=""/>
+        </div>
+        <div id="tabp3" class="tab-pane">
+          <img src="images/tabp3.jpg" class="img-fluid" alt=""/>
+        </div>
+        <div id="tabp4" class="tab-pane">
+          <img src="images/photo4.jpg" class="img-fluid" alt=""/>
+        </div>
+      </div>
+      
+      <footer>
+          <a href="chrome://bookmarks/" id="manager"><i class="icon-star"></i> Bookmarks Manager</a>
+      </footer>
     </body>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/options.js"></script>
+    <script src="js/popup.js"></script>
 </html>

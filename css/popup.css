@@ -22,18 +22,10 @@ html {
   a:focus {
     display: block;
     overflow: hidden;
-    padding: 0.4em 0.5em;
     box-sizing: border-box;
     text-decoration: none;
     color: #15C;
-    outline: 0;
-    background-position: 0.5em 0.4em;
-    background-repeat: no-repeat;
     transition: all 0.1s linear;
-  }
-  a:hover,
-  a:focus {
-    background-color: #EEEEEE;
   }
   h2 {
     margin: 0.3em 0 0.2em 0;
@@ -51,13 +43,9 @@ html {
     overflow: auto;
   }
   #groups a {
-    display: table;
+    display: block;
     width: 100%;
     border-radius: 0.3em;
-  }
-  #groups a > * {
-    display: table-cell;
-    vertical-align: top;
   }
   #groups a .title {
     width: 100%;
@@ -66,9 +54,14 @@ html {
   #groups a .delete {
     padding: 0;
     text-shadow: #FFF 0 1px;
-    vertical-align: middle;
     opacity: 0;
     visibility: hidden;
+  }
+  #groups a .description {
+      text-align: left;
+      font-size: 8px;
+      display: inline;
+      color: #999999;
   }
   #groups a:hover .delete,
   #groups a:focus .delete {
