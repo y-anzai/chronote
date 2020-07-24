@@ -1,8 +1,9 @@
 (function() {
   $(function() {
     var $doc, $groups, $list, $manager, dateString, defaultFaviconUrl, deleteBookmark, faviconPrefix, focusIndex, getBookmarks, isBookmarklet, isToday, lastDate, months, options, weekdays;
-    weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    //weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+    //months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     faviconPrefix = 'https://www.google.com/s2/favicons?domain=';
     defaultFaviconUrl = 'default.png';
     options = window.options.load();
@@ -13,7 +14,7 @@
     $groups = $('#groups');
     $list = null;
     dateString = function(d) {
-      return "" + weekdays[d.getDay()] + ", " + months[d.getMonth()] + " " + (d.getDate());
+      return d.getFullYear() + "年" + parseInt(d.getMonth() + 1) +  "月" + (d.getDate()) + "日 ("+ weekdays[d.getDay()] + ")";
     };
     isToday = function(d) {
       var today;
@@ -82,7 +83,12 @@
           if (result.title.length > 0) {
             $title.text(result.title);
           }
-          $close = $('<a class="delete icon-remove-sign"></a>');
+          $desc = $('<span class="description">&nbsp;</span>');
+          $link.append($desc);
+          //if (result.desc.length > 0) {
+            $desc.text("更新日:");
+          //}
+          $close = $('<a class="delete icon-remove-sign">x</a>');
           $link.append($close);
           return $close.on('click', function(e) {
             e.preventDefault();

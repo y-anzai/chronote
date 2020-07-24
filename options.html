@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Recent Bookmarks Options</title>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="js/options.js"></script>
+        <script src="js/optionspage.js"></script>
+
+        <link href="css/options.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <h1><img src="icon24.png"> Recent Bookmarks Options</h1>
+
+        <div class="field">
+            <label for="count">Number of Bookmarks</label>
+            <select id="count">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="250">250</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+            </select>
+        </div>
+        <div id="tablist">
+            <div style="width:500px;float:left;">
+                <div id="tabmenus" style="float:left;">
+                </div>
+            </div>
+            <div style="float:right;margin-top:2px;">
+                <a class="btn btn-success" style="width:40px;margin-right:2px;" id="tab-add">+</a>
+                <a class="btn btn-danger" style="width:40px;" id="tab-delete-check">-</a>
+            </div>
+        </div>
+        <div class="field">
+            <label for="manager">Manager Button</label>
+            <input type="checkbox" id="manager" checked="checked" />
+        </div>
+
+        <menu class="actions">
+            <button id="save">Save Options</button>
+        </menu>
+    </body>
+</html>
