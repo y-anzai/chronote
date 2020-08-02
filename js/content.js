@@ -1,1 +1,1 @@
-window.alert('アプリ開いたね！');
+//window.alert('アプリ開いたね！');
