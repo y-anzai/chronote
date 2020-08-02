@@ -87,6 +87,7 @@
           $link.append($desc);
           //if (result.desc.length > 0) {
             $desc.text("更新日:");
+            $desc.html("<div class='bootstrap-tagsinput'><span class='tag label label-info'>Amsterdam<span data-role='remove'></span></span> <span class='tag label label-info'>Washington<span data-role='remove'></span></span> <span class='tag label label-info'>Sydney<span data-role='remove'></span></span> <span class='tag label label-info'>Beijing<span data-role='remove'></span></span>   <input type='text' placeholder='' size='1'></div>");
           //}
           $close = $('<a class="delete icon-remove-sign">x</a>');
           $link.append($close);
